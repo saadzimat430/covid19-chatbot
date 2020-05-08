@@ -13,14 +13,13 @@ For Windows
 flask run
 ```
 
-# Example API
+or
+```
+python -m flask run
+```
 
-Comma separated symptoms.
+# Example API
 
 symptoms - required.
 
-For single symptoms:
-```http://localhost:5000/?symptoms=puffy_face_and_eyes```
-
-For multiple symptoms:
-```http://localhost:5000/?symptoms=puffy_face_and_eyes,pus_filled_pimples```
+```http://localhost:5000/```
