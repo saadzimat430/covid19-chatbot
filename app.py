@@ -25,9 +25,20 @@ def get_disease():
 
     disease = requests.get('https://flask832.herokuapp.com/get_disease?symptoms={0}'.format(','.join(symptoms))).content
     disease_json = json.loads(disease)
-    response = """
-             You might have {0}.
+
+    # Python's triple quotes comes to the rescue by allowing strings to span multiple lines,
+    # including verbatim NEWLINEs, TABs, and any other special characters.
+    if disease_json['data']=='Heart attack' or disease_json['data']=='Bronchial Asthma' or disease_json['data']=='Gastroenteritis':
+        response = """
+            People with COVID-19 can have symptoms similar to those of a heart attack or bronchial asthma,
+            thus I can't know exactly whether you have the coronavirus or not.
+            You should name at least four symptoms to be more precise.
+         """
+    else:
+        response = """
+             You might have {0}. Please check with your doctor as soon as you can.
          """.format(disease_json['data'])
+
 
     reply = {
     "fulfillmentText": response,
