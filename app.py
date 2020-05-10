@@ -28,11 +28,9 @@ def get_disease():
 
     # Python's triple quotes comes to the rescue by allowing strings to span multiple lines,
     # including verbatim NEWLINEs, TABs, and any other special characters.
-    if disease_json['data']=='Heart attack' or disease_json['data']=='Bronchial Asthma' or disease_json['data']=='Gastroenteritis':
+    if (disease_json['data']=='Heart attack' or disease_json['data']=='Bronchial Asthma' or disease_json['data']=='Gastroenteritis') and len(symptoms) < 5:
         response = """
-            People with COVID-19 can have symptoms similar to those of a heart attack or bronchial asthma,
-            thus I can't know exactly whether you have the coronavirus or not.
-            You should name at least four symptoms to be more precise.
+            People with COVID-19 can have symptoms similar to those of a heart attack or bronchial asthma, thus I can't know exactly whether you have the coronavirus or not. You should name at least four symptoms to be more precise.
          """
     else:
         response = """
