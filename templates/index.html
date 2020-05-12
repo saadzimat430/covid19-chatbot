@@ -10,9 +10,11 @@
     <title>COVID-19 Bot</title>
   </head>
   <body>
+      <img src="https://i.ibb.co/2W6Sq34/hands.jpg" id="bg" alt="">
       <div class="container h-100">
         <div class="row align-items-center h-100">
-            <div class="col-md-8 col-sm-12 mx-auto">
+            <div class="col-md-8 col-sm-12 mx-auto" style="border: 5px solid purple; border-radius: 8px;
+                 background-color:whitesmoke; ">
                 <div class="h-100 justify-content-center">
                     <div id="chat-container" class='panel-Body scroll'>
                         <!-- chat messages -->
@@ -28,7 +30,6 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
     <script src="{{ url_for('static', filename='custom.js')}}"></script>
   </body>
 </html>
