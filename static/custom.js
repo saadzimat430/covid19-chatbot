@@ -6,8 +6,11 @@ function submit_message(message) {
     function handle_response(data) {
       // append the bot repsonse to the div
       $('#chat-container').append(`
-            <div class="chat-message col-md-5 offset-md-7 bot-message" id="response">
-                ${data.message}
+            <div class="container d-flex flex-row">
+                <div class="chat-message col-md-5 offset-md-7 bot-message" id="response">
+                    ${data.message}
+                </div>
+                <div class="incoming_msg_img"><img src="https://i.ibb.co/DM5BYYP/bot.jpg" id="bot_img" alt="img"></div>
             </div>
       `).animate({scrollTop: $('#chat-container').prop("scrollHeight")}, 500)
 

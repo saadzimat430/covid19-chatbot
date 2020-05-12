@@ -1,12 +1,13 @@
 body,html {
     height: 100%;
+    overflow-y: hidden;
 }
 
 #chat-container {
     margin: 0;
-    border: 5px green;
     height: 700px;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .chat-message {
@@ -15,9 +16,15 @@ body,html {
   margin-bottom: 3px;
 }
 
+.incoming_msg_img {
+  display: inline-block;
+  width: 6%;
+}
+
 .bot-message {
-    background: green;
+    background: purple;
     color: white;
+    margin-left: 53%;
 }
 
 .human-message {
@@ -32,4 +39,22 @@ body,html {
   height: 60px;
   border: 1px solid rosybrown;
   border-radius: 3px;
+}
+
+#bot_img {
+  border-radius: 50%;
+    vertical-align: bottom;
+}
+
+p { color: #685206; font-family: 'Helvetica Neue', sans-serif; font-size: 30px;
+    line-height: 24px; margin: 0 0 24px; text-align: center;
+    text-justify: inter-word;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
